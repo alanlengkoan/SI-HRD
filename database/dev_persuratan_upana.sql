@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 07 Jul 2019 pada 05.00
+-- Waktu pembuatan: 07 Jul 2019 pada 10.43
 -- Versi server: 5.7.24
 -- Versi PHP: 7.2.11
 
@@ -195,7 +195,7 @@ CREATE TABLE `data_user` (
 --
 
 INSERT INTO `data_user` (`id_data_user`, `username`, `nama`, `password_admin`, `level_akses`, `remember_me`, `session_id`, `email_admin`, `telepon_admin`, `alamat_admin`, `Iat`, `Uat`) VALUES
-(1, 'D42115320', 'Fadel Rezky Ramadhan', '202cb962ac59075b964b07152d234b70', 'mahasiswa', 0, 'c7cik3rjmbslm3765j4gh7nnjor2k35s', 'fadelr35@gmail.com', '089631837157', 'Jl. BTN Griya Maros Indah', '0000-00-00 00:00:00', '2019-07-06 08:25:47');
+(1, 'D42115320', 'Fadel Rezky Ramadhan', '202cb962ac59075b964b07152d234b70', 'mahasiswa', 0, '7d023nm57vn8r41u5borr0gqmk7i50hl', 'fadelr35@gmail.com', '089631837157', 'Jl. BTN Griya Maros Indah', '0000-00-00 00:00:00', '2019-07-07 07:26:30');
 
 -- --------------------------------------------------------
 
@@ -323,6 +323,7 @@ CREATE TABLE `template_surat_spk01` (
   `isi_pertama` text NOT NULL,
   `isi_kedua` text NOT NULL,
   `isi_ketiga` text NOT NULL,
+  `isi_keempat` text NOT NULL,
   `iat` datetime NOT NULL,
   `uat` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -331,8 +332,8 @@ CREATE TABLE `template_surat_spk01` (
 -- Dumping data untuk tabel `template_surat_spk01`
 --
 
-INSERT INTO `template_surat_spk01` (`id_template_surat_izinpenelitian`, `id_data_dosen`, `isi_pertama`, `isi_kedua`, `isi_ketiga`, `iat`, `uat`) VALUES
-(1, 2, 'adakah!', 'coba lagi', 'isi ketiga', '2019-07-18 00:00:00', '2019-07-05 08:11:15');
+INSERT INTO `template_surat_spk01` (`id_template_surat_izinpenelitian`, `id_data_dosen`, `isi_pertama`, `isi_kedua`, `isi_ketiga`, `isi_keempat`, `iat`, `uat`) VALUES
+(1, 2, 'Dalam pelaksanaan kerjasama tersebut, <span class=\"c1\">PARA PIHAK</span> sepakat bahwa seluruh informasi baik mengenai hasil-hasil yang dicapai maupun segala sesuatu yang atau dipertukarkan oleh <span class=\"c1\">PARA PIHAK</span> baik pada saat sebelum, selama maupun sesudah proses pelaksanaan kerjasama ini, wajib diperlakukan sebagai rahasia selama 2 (dua) tahun terhitung sejak tanggal berakhirnya Perjanjian Kerjasama ini karena sebab apapun, kecuali ditentukan lain secara tertulis oleh pihak yang memberi informasi.', '<ol class=\"c6 lst-kix_list_7-8 start\" start=\"1\">\n    <li class=\"c12 c14\">\n        <span class=\"c4\">Keadaan memaksa adalah keadaan atau kejadian di luar kekuasaan</span> <span class=\"c7 c1\">PIHAK PERTAMA</span><span class=\"c4\">&nbsp;dan </span><span class=\"c7 c1\">PIHAK KEDUA</span> <span class=\"c4\">&nbsp;yang mengakibatkan terhentinya atau tertundanya pelaksanaan perjanjian, yaitu bencana alam (banjir, gempa bumi, angin, topan, petir) serta huru-hara, kebakaran dan hal-hal lain di luar kekuasaan kedua belah pihak yang oleh pejabat berwenang dinyatakan sebagai keadaan memaksa.</span>\n    </li>\n    <li class=\"c12 c14\">\n        <span class=\"c1 c7\">PIHAK PERTAMA</span><span class=\"c4\">&nbsp;dapat meminta pertimbangan dari </span><span class=\"c7 c1\">PIHAK KEDUA</span><span class=\"c4\">&nbsp;secara tertulis selambat-lambatnya dalam waktu 2 (satu) hari sejak terjadinya keadaan memaksa dan dilampirkan bukti-bukti yang sah untuk menyelesaikan pekerjaan akibat keadaan memaksa berdasarkan penyelidikan yang seksama.</span>\n    </li>\n</ol>', 'Hal-hal lain yang ada hubungannya dengan perjanjian ini dan belum cukup diatur dalam pasal-pasal dari surat perjanjian ini akan ditentukan lebih lanjut oleh kedua belah pihak secara musyawarah dan mufakat dan dituangkan dalam Surat Perjanjian Tambahan/Addendum dan merupakan bagian yang tidak terpisahkan dari perjanjian ini.', '<ol class=\"c6 lst-kix_list_5-8 start\" start=\"1\">\n    <li class=\"c12 c49 c14\">\n        <span class=\"c4\">Surat Perjanjian ini dinyatakan sah dan mengikat kedua belah pihak dan mulai berlaku setelah ditandatangani oleh kedua belah pihak.</span>\n    </li>\n    <li class=\"c42 c49 c14\">\n        <span class=\"c4\">Surat Perjanjian ini dibuat 2 (dua) rangkap masing-masing bermaterai cukup dan mempunyai kekuatan hukum yang sama.</span>\n    </li>\n</ol>', '2019-07-18 00:00:00', '2019-07-07 10:04:54');
 
 --
 -- Indexes for dumped tables

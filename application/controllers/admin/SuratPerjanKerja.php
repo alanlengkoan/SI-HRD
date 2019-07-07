@@ -29,7 +29,8 @@ class SuratPerjanKerja extends MY_Controller {
       'title' => 'Administrator | Halaman Proses Surat Aktif Kuliah',
       //'subtitle'  => 'Selamat datang, '.$this->session->fullname.'.',
       'isi'   => 'admin/cetakPK',
-      'data'	=> $this->model_join->get_id_surat_spk01($id_suratspk01)
+      'data'	=> $this->model_join->get_id_surat_spk01($id_suratspk01),
+      'isi_surat' => $this->model_join->get_isi_surat_spk01()
     );
     $this->load->view('admin/_layout/wrapper', $data);
   }

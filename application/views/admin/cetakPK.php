@@ -754,76 +754,56 @@
 						<p class="c34 c31"><span class="c4"></span></p>
 						<p class="c16"><span class="c7 c1">PASAL 7</span></p>
 						<p class="c56"><span class="c1">KERAHASIAAN INFORMASI</span></p>
-						<p class="c12 c65"><span class="c9">Dalam pelaksanaan kerjasama tersebut, </span><span
-								class="c1">PARA
-								PIHAK</span><span class="c9">&nbsp;sepakat bahwa seluruh informasi baik mengenai
-								hasil-hasil
-								yang
-								dicapai maupun segala sesuatu yang diketahui atau dipertukarkan oleh </span><span
-								class="c1">PARA
-								PIHAK</span><span class="c4">&nbsp;baik pada saat sebelum, selama maupun sesudah proses
-								pelaksanaan
-								kerjasama ini, wajib diperlakukan sebagai rahasia selama 2 (dua) tahun terhitung sejak
-								tanggal
-								berakhirnya Perjanjian Kerjasama ini karena sebab apapun, kecuali ditentukan lain secara
-								tertulis oleh
-								pihak yang memberi informasi.</span></p>
+
+						<table>
+							<?php foreach ($isi_surat as $key => $value) { ?>
+							<tr>
+								<td class="id" data-id="<?= $value->id_template_surat_izinpenelitian ?>"></td>
+								<td align="justify" class="item" data-name="isi_pertama">
+									<p class="c12"><span class="c4"><?= $value->isi_pertama ?></span></p>
+								</td>
+							</tr>
+							<?php } ?>
+						</table>
 						<p class="c34 c31 c49"><span class="c7 c1"></span></p>
 						<p class="c16"><span class="c7 c1">PASAL 8</span></p>
 						<p class="c56"><span class="c1">KEADAAN MEMAKSA</span></p>
-						<ol class="c6 lst-kix_list_7-8 start" start="1">
-							<li class="c12 c14"><span class="c4">Keadaan memaksa adalah keadaan atau kejadian di luar
-									kekuasaan
-								</span><span class="c7 c1">PIHAK PERTAMA</span><span class="c4">&nbsp;dan </span><span
-									class="c7 c1">PIHAK KEDUA</span><span class="c4">&nbsp;yang mengakibatkan
-									terhentinya
-									atau
-									tertundanya pelaksanaan perjanjian, yaitu bencana alam (banjir, gempa bumi, angin,
-									topan, petir)
-									serta huru-hara, kebakaran dan hal-hal lain di luar kekuasaan kedua belah pihak yang
-									oleh pejabat
-									berwenang dinyatakan sebagai keadaan memaksa.</span></li>
-							<li class="c12 c14"><span class="c1 c7">PIHAK PERTAMA</span><span class="c4">&nbsp;dapat
-									meminta
-									pertimbangan dari </span><span class="c7 c1">PIHAK KEDUA</span><span
-									class="c4">&nbsp;secara
-									tertulis selambat-lambatnya dalam waktu 2 (satu) hari sejak terjadinya keadaan
-									memaksa
-									dan
-									dilampirkan bukti-bukti yang sah untuk menyelesaikan pekerjaan akibat keadaan
-									memaksa
-									berdasarkan
-									penyelidikan yang seksama.</span></li>
-						</ol>
+						<table>
+							<?php foreach ($isi_surat as $key => $value) { ?>
+							<tr>
+								<td class="id" data-id="<?= $value->id_template_surat_izinpenelitian ?>"></td>
+								<td align="justify" class="item" data-name="isi_kedua">
+									<?= $value->isi_kedua ?>
+								</td>
+							</tr>
+							<?php } ?>
+						</table>
 						<p class="c31 c42"><span class="c4"></span></p>
 						<p class="c16"><span class="c7 c1">PASAL 9</span></p>
 						<p class="c56"><span class="c1">LAIN-LAIN</span></p>
-						<p class="c12"><span class="c4">Hal-hal lain yang ada hubungannya dengan perjanjian ini dan
-								belum
-								cukup diatur
-								dalam pasal-pasal dari surat perjanjian ini akan ditentukan lebih lanjut oleh kedua
-								belah
-								pihak secara
-								musyawarah dan mufakat dan dituangkan dalam Surat Perjanjian Tambahan/Addendum dan
-								merupakan
-								bagian yang
-								tidak terpisahkan dari perjanjian ini.</span></p>
-						<p class="c12 c31"><span class="c4"></span></p>
-						<p class="c12 c31"><span class="c4"></span></p>
-						<p class="c12 c31"><span class="c4"></span></p>
-						<p class="c12 c31"><span class="c4"></span></p>
+						<table>
+							<?php foreach ($isi_surat as $key => $value) { ?>
+							<tr>
+								<td class="id" data-id="<?= $value->id_template_surat_izinpenelitian ?>"></td>
+								<td align="justify" class="item" data-name="isi_ketiga">
+									<p class="c12"><span class="c4"><?= $value->isi_ketiga ?></span></p>
+								</td>
+							</tr>
+							<?php } ?>
+						</table>
 						<p class="c16 c31"><span class="c7 c1"></span></p>
 						<p class="c16"><span class="c7 c1">PASAL 10</span></p>
 						<p class="c2 c65"><span class="c7 c1">PENUTUP</span></p>
-						<ol class="c6 lst-kix_list_5-8 start" start="1">
-							<li class="c12 c49 c14"><span class="c4">Surat Perjanjian ini dinyatakan sah dan mengikat
-									kedua
-									belah pihak
-									dan mulai berlaku setelah ditandatangani oleh kedua belah pihak.</span></li>
-							<li class="c42 c49 c14"><span class="c4">Surat Perjanjian ini dibuat 2 (dua) rangkap
-									masing-masing
-									bermaterai cukup dan mempunyai kekuatan hukum yang sama.</span></li>
-						</ol>
+						<table>
+							<?php foreach ($isi_surat as $key => $value) { ?>
+							<tr>
+								<td class="id" data-id="<?= $value->id_template_surat_izinpenelitian ?>"></td>
+								<td class="item" data-name="isi_keempat">
+									<?= $value->isi_keempat ?>
+								</td>
+							</tr>
+							<?php } ?>
+						</table>
 						<p class="c31 c47"><span class="c4"></span></p>
 						<p class="c13 c48"><span class="c4"></span></p>
 						<p class="c13"><span class="c4"></span></p>
@@ -986,6 +966,7 @@
 								$('#cetakspk01').val($('#document').html());
 							});
 						});
+
 					</script>
 
 				</div>

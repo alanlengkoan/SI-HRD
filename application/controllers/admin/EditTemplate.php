@@ -75,6 +75,13 @@ class EditTemplate extends MY_Controller {
         $ubah  = $this->db->query("UPDATE template_surat_spk01 SET isi_ketiga = '$value' WHERE id_template_surat_izinpenelitian = '$id'");
         echo "Ubah";
 
+    } else if ($this->input->post('key') == 'isi_keempat') {
+
+      $id    = $this->input->post('id');
+      $value = $this->input->post('value');
+      $ubah  = $this->db->query("UPDATE template_surat_spk01 SET isi_keempat = '$value' WHERE id_template_surat_izinpenelitian = '$id'");
+      echo "Ubah";
+
     }
 
   }

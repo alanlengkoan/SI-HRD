@@ -153,7 +153,9 @@
 					<p class="c30"><span class="c4"></span></p>
 					<p class="c16"><span class="c7 c1">PASAL 3</span></p>
 					<p class="c2"><span class="c7 c1">JANGKA WAKTU KERJA</span></p>
-					<p class="c12"><span class="c1">PIHAK PERTAMA</span><span class="c9">&nbsp;berkewajiban untuk
+					<p class="c12">
+					<span class="c1">
+					PIHAK PERTAMA</span><span class="c9">&nbsp;berkewajiban untuk
 							melaksanakan dan
 							menyerahkan hasil pekerjaan sebagaimana tertera pada pasal 2 ayat 2 kepada </span><span
 							class="c1">PIHAK
@@ -436,3 +438,29 @@
 								style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 817.00px; height: 94.50px;"></span>
 						</p>
                     </div>
+
+PASAL 7
+Dalam pelaksanaan kerjasama tersebut, <span class="c1">PARA PIHAK</span> sepakat bahwa seluruh informasi baik mengenai hasil-hasil yang dicapai maupun segala sesuatu yang atau dipertukarkan oleh <span class="c1">PARA PIHAK</span> baik pada saat sebelum, selama maupun sesudah proses pelaksanaan kerjasama ini, wajib diperlakukan sebagai rahasia selama 2 (dua) tahun terhitung sejak tanggal berakhirnya Perjanjian Kerjasama ini karena sebab apapun, kecuali ditentukan lain secara tertulis oleh pihak yang memberi informasi.
+
+PASAL 8
+<ol class="c6 lst-kix_list_7-8 start" start="1">
+    <li class="c12 c14">
+        <span class="c4">Keadaan memaksa adalah keadaan atau kejadian di luar kekuasaan</span> <span class="c7 c1">PIHAK PERTAMA</span><span class="c4">&nbsp;dan </span><span class="c7 c1">PIHAK KEDUA</span> <span class="c4">&nbsp;yang mengakibatkan terhentinya atau tertundanya pelaksanaan perjanjian, yaitu bencana alam (banjir, gempa bumi, angin, topan, petir) serta huru-hara, kebakaran dan hal-hal lain di luar kekuasaan kedua belah pihak yang oleh pejabat berwenang dinyatakan sebagai keadaan memaksa.</span>
+    </li>
+    <li class="c12 c14">
+        <span class="c1 c7">PIHAK PERTAMA</span><span class="c4">&nbsp;dapat meminta pertimbangan dari </span><span class="c7 c1">PIHAK KEDUA</span><span class="c4">&nbsp;secara tertulis selambat-lambatnya dalam waktu 2 (satu) hari sejak terjadinya keadaan memaksa dan dilampirkan bukti-bukti yang sah untuk menyelesaikan pekerjaan akibat keadaan memaksa berdasarkan penyelidikan yang seksama.</span>
+    </li>
+</ol>
+
+PASAL 9
+Hal-hal lain yang ada hubungannya dengan perjanjian ini dan belum cukup diatur dalam pasal-pasal dari surat perjanjian ini akan ditentukan lebih lanjut oleh kedua belah pihak secara musyawarah dan mufakat dan dituangkan dalam Surat Perjanjian Tambahan/Addendum dan merupakan bagian yang tidak terpisahkan dari perjanjian ini.
+
+PASAL 10
+<ol class="c6 lst-kix_list_5-8 start" start="1">
+    <li class="c12 c49 c14">
+        <span class="c4">Surat Perjanjian ini dinyatakan sah dan mengikat kedua belah pihak dan mulai berlaku setelah ditandatangani oleh kedua belah pihak.</span>
+    </li>
+    <li class="c42 c49 c14">
+        <span class="c4">Surat Perjanjian ini dibuat 2 (dua) rangkap masing-masing bermaterai cukup dan mempunyai kekuatan hukum yang sama.</span>
+    </li>
+</ol>
