@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>Buat Surat</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<!-- VENDOR CSS -->
+		<link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="assets/vendor/themify-icons/css/themify-icons.css">
+		<link rel="stylesheet" href="assets/vendor/pace/themes/orange/pace-theme-minimal.css">
+		<link rel="stylesheet" href="assets/css/vendor/animate/animate.min.css">
+		<link rel="stylesheet" href="assets/vendor/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css">
+		<link rel="stylesheet" href="assets/vendor/x-editable/bootstrap3-editable/css/bootstrap-editable.css">
+		<link rel="stylesheet" href="assets/vendor/bootstrap-tour/css/bootstrap-tour.min.css">
+		<link rel="stylesheet" href="assets/vendor/jqvmap/jqvmap.min.css">
+		<!-- MAIN CSS -->
+		<link rel="stylesheet" href="assets/css/main.css">
+		<link rel="stylesheet" href="assets/css/skins/sidebar-nav-darkgray.css" type="text/css">
+		<link rel="stylesheet" href="assets/css/skins/navbar3.css" type="text/css">
+		<!-- FOR DEMO PURPOSES ONLY. You should/may remove this in your project -->
+		<link rel="stylesheet" href="assets/css/demo.css">
+		<link rel="stylesheet" href="demo-panel/style-switcher.css">
+		<!-- ICONS -->
+		<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
+	</head>
+	<body>
+		<!-- WRAPPER -->
+		<div id="wrapper">
+			<!-- NAVBAR -->
+			<nav class="navbar navbar-default navbar-fixed-top">
+				<div class="brand">
+					<a href="dashboard-mhs.html">
+						<img src="assets/img/logo-white.png" alt="Klorofil Pro Logo" class="img-responsive logo">
+					</a>
+				</div>
+				<div class="container-fluid">
+					<div id="tour-fullwidth" class="navbar-btn">
+						<button type="button" class="btn-toggle-fullwidth"><i class="ti-arrow-circle-left"></i></button>
+					</div>
+					<div id="navbar-menu">
+						<ul class="nav navbar-nav navbar-right">
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="ti-user"></i><span>Akun</span></a>
+								<ul class="dropdown-menu logged-user-menu">
+									<li><a href="#"><i class="ti-user"></i> <span>My Profile</span></a></li>
+									<li><a href="appviews-inbox.html"><i class="ti-email"></i> <span>Message</span></a></li>
+									<li><a href="#"><i class="ti-settings"></i> <span>Settings</span></a></li>
+									<li><a href="#" ><i class="ti-power-off"></i> <span>Logout</span></a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<!-- END NAVBAR -->
+			<!-- LEFT SIDEBAR -->
+			<div id="sidebar-nav" class="sidebar">
+				<nav>
+					<ul class="nav" id="sidebar-nav-menu">
+						<li><a href="dashboard-mhs.html" ><i class="ti-dashboard"></i><span class="title">Dashboard</span></a></li>
+						<li><a href="buat-surat.html" class="active" ><i class="fa fa-pencil"></i> <span class="title">Buat Surat</span></a></li>
+						<li class="panel">
+							<a href="#riwayat" data-toggle="collapse" data-parent="#sidebar-nav-menu" class="collapsed"><i class="fa fa-history"></i> <span class="title">Riwayat Surat</span> <i class="icon-submenu ti-angle-left"></i></a>
+							<div id="riwayat" class="collapse ">
+								<ul class="submenu">
+									<li><a href="suratproses.html">Surat Diproses</a></li>
+									<li><a href="suratselesai.html">Surat Selesai</a></li>
+									<li><a href="suratbatal.html">Surat Dibatalkan</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<!-- END LEFT SIDEBAR -->
+			<!-- MAIN -->
+			<div class="main">
+				<div class="main-content">
+					<div class="content-heading clearfix">
+						<div class="heading-left">
+							<h1 class="page-title">SELAMAT DATANG DI ADMINISTRASI PERSURATAN FKG UNLAM</h1>
+							<p class="page-subtitle">Keep Strong and Don't Forget to be Happy</p>
+						</div>
+						<ul class="breadcrumb">
+							<li><a href="#"><i class="fa fa-home"></i>Home</a></li>
+							<li class="active">Buat Surat</li>
+						</ul>
+					</div>										
+					<div class="container-fluid">
+						<div class="panel">
+									<div class="panel-heading">
+										<h3 class="panel-title">Buat Surat</h3>
+									</div>
+									<div class="panel-body">
+										<div class="box">
+										<div class="col-lg-12">
+										<hr><h2 class="intro-text text-center"><strong>PILIH SURAT</strong></h2></hr></div>
+											<form action="" method="post">
+												<div class="form-gorup">
+												<div class="col-md-4 col-md-offset-4">
+													<select id="jenissurat" class="form-control" onchange="pilih_surat()" name="jenissurat">
+														<option value="" disabled="" selected="" style="display:none;">Pilih Jenis Surat</option>
+														<option value="SuratKP"> Surat Permohonan Kerja Praktek</option>
+														<option value="SuratAK"> SK Aktif Kuliah</option>
+														<option value="SuratIP"> Surat Izin Penelitian</option>
+													</select>
+												</div>
+												</div>
+											</form>
+										</div>
+										<div class="form-group">
+											<div class="box-forms">
+											<div class="col-md-6 col-md-offset-3">
+												<h4 class="intro-text text-center">
+												<strong>SURAT KERJA PRAKTEK</strong></h4></div>
+											</div>
+										</div>
+										</div>
+
+										<div class="box-forms">
+										<div class="form-horizontal">
+											<div id="nim" name="nim" class="form-group" class="intro-text text-center" >
+												<label class="col-md-2 control-label">NIM</label>
+												<div class="col-md-6">
+													<input id="nim" name="nim" type="text" class="form-control" autocomplete="off" value="12345" placeholder="nim">
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="col-md-2 control-label">Nama Mahasiswa</label>
+												<div class="col-md-6">
+													<input type="text" class="form-control" value="">
+												</div>
+											</div>
+											
+											<div class="form-group">
+												<label class="col-md-2 control-label">Multiple</label>
+												<div class="col-md-10">
+													<select multiple class="form-control">
+														<option value="cheese">Cheese</option>
+														<option value="tomatoes">Tomatoes</option>
+														<option value="mozarella">Mozzarella</option>
+														<option value="mushrooms">Mushrooms</option>
+														<option value="pepperoni">Pepperoni</option>
+														<option value="onions">Onions</option>
+													</select>
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="col-md-2 control-label">Checkbox</label>
+												<div class="col-md-10">
+													<div class="checkbox">
+														<label>
+															<input type="checkbox" value="item1"> Item 1
+														</label>
+													</div>
+													<div class="checkbox">
+														<label>
+															<input type="checkbox" value="item2"> Item 2
+														</label>
+													</div>
+													<div class="checkbox">
+														<label>
+															<input type="checkbox" value="item3"> Item 3
+														</label>
+													</div>
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="col-md-2 control-label">Inline</label>
+												<div class="col-md-10">
+													<label class="checkbox-inline">
+														<input type="checkbox" value="item1"> Item 1
+													</label>
+													<label class="checkbox-inline">
+														<input type="checkbox" value="item2"> Item 2
+													</label>
+													<label class="checkbox-inline">
+														<input type="checkbox" value="item3"> Item 3
+													</label>
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="col-md-2 control-label">Radio Button</label>
+												<div class="col-md-10">
+													<div class="radio">
+														<label>
+															<input type="radio" name="radio" value="radio1"> Radio Item 1
+														</label>
+													</div>
+													<div class="radio">
+														<label>
+															<input type="radio" name="radio" value="radio2"> Radio Item 2
+														</label>
+													</div>
+													<div class="radio">
+														<label>
+															<input type="radio" name="radio" value="radio3"> Radio Item 3
+														</label>
+													</div>
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="col-md-2 control-label">Inline</label>
+												<div class="col-md-10">
+													<label class="radio radio-inline">
+														<input type="radio" name="radioinline" value="radio1"> Radio Item 1
+													</label>
+													<label class="radio radio-inline">
+														<input type="radio" name="radioinline" value="radio2"> Radio Item 2
+													</label>
+													<label class="radio radio-inline">
+														<input type="radio" name="radioinline" value="radio3"> Radio Item 3
+													</label>
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="exampleInputFile" class="col-md-2 control-label">File input</label>
+												<div class="col-md-10">
+													<input type="file" id="exampleInputFile">
+													<p class="help-block">
+														<em>Example block-level help text here.</em>
+													</p>
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="col-sm-2 control-label">Static Control</label>
+												<div class="col-sm-10">
+													<p class="form-control-static">email@example.com</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- END MAIN -->
+			<div class="clearfix"></div>
+			<footer>
+				<div class="container-fluid">
+					<p class="copyright">&copy; 2018 <a href="https://www.themeineed.com" target="_blank">Theme I Need</a>.All Rights Reserved.</p>
+				</div>
+			</footer>
+		</div>
+		<!-- END WRAPPER -->
+		<!-- Javascript -->
+		<script src="assets/vendor/jquery/jquery.min.js"></script>
+		<script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+		<script src="assets/vendor/pace/pace.min.js"></script>
+		<script src="assets/vendor/jquery.maskedinput/jquery.maskedinput.min.js"></script>
+		<script src="assets/vendor/jquery-ui/jquery-ui.min.js"></script>
+		<script src="assets/vendor/pwstrength-bootstrap/pwstrength-bootstrap.min.js"></script>
+		<script src="assets/vendor/hideshowpassword/hideShowPassword.min.js"></script>
+		<script src="assets/vendor/switchery/switchery.min.js"></script>
+		<script src="assets/scripts/klorofilpro-common.js"></script>
+		<!-- DEMO PANEL -->
+		<!-- for demo purpose only, you should remove it on your project directory -->
+		<script type="text/javascript">
+		var toggleDemoPanel = function(e)
+		{
+			e.preventDefault();
+			var panel = document.getElementById('demo-panel');
+			if (panel.className) panel.className = '';
+			else panel.className = 'active';
+		}
+		// fix each iframe src when back button is clicked
+		$(function()
+		{
+			$('iframe').each(function()
+			{
+				this.src = this.src;
+			});
+		});
+		</script>
+	</body>
+</html>

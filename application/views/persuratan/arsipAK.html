@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>Arsip SK Aktif Kuliah</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<!-- VENDOR CSS -->
+		<link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="assets/vendor/themify-icons/css/themify-icons.css">
+		<link rel="stylesheet" href="assets/vendor/pace/themes/orange/pace-theme-minimal.css">
+		<link rel="stylesheet" href="assets/css/vendor/animate/animate.min.css">
+		<link rel="stylesheet" href="assets/vendor/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css">
+		<link rel="stylesheet" href="assets/vendor/x-editable/bootstrap3-editable/css/bootstrap-editable.css">
+		<link rel="stylesheet" href="assets/vendor/bootstrap-tour/css/bootstrap-tour.min.css">
+		<link rel="stylesheet" href="assets/vendor/jqvmap/jqvmap.min.css">
+		<!-- MAIN CSS -->
+		<link rel="stylesheet" href="assets/css/main.css">
+		<link rel="stylesheet" href="assets/css/skins/sidebar-nav-darkgray.css" type="text/css">
+		<link rel="stylesheet" href="assets/css/skins/navbar3.css" type="text/css">
+		<!-- FOR DEMO PURPOSES ONLY. You should/may remove this in your project -->
+		<link rel="stylesheet" href="assets/css/demo.css">
+		<link rel="stylesheet" href="demo-panel/style-switcher.css">
+		<!-- ICONS -->
+		<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
+	</head>
+	<body>
+		<!-- WRAPPER -->
+		<div id="wrapper">
+			<!-- NAVBAR -->
+			<nav class="navbar navbar-default navbar-fixed-top">
+				<div class="brand">
+					<a href="index.html">
+						<img src="assets/img/logo-white.png" alt="Klorofil Pro Logo" class="img-responsive logo">
+					</a>
+				</div>
+				<div class="container-fluid">
+					<div id="tour-fullwidth" class="navbar-btn">
+						<button type="button" class="btn-toggle-fullwidth"><i class="ti-arrow-circle-left"></i></button>
+					</div>
+					<div id="navbar-menu">
+						<ul class="nav navbar-nav navbar-right">
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="ti-user"></i><span>Akun</span></a>
+								<ul class="dropdown-menu logged-user-menu">
+									<li><a href="#"><i class="ti-user"></i> <span>My Profile</span></a></li>
+									<li><a href="appviews-inbox.html"><i class="ti-email"></i> <span>Message</span></a></li>
+									<li><a href="#"><i class="ti-settings"></i> <span>Settings</span></a></li>
+									<li><a href="#" ><i class="ti-power-off"></i> <span>Logout</span></a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<!-- END NAVBAR -->
+			<!-- LEFT SIDEBAR -->
+			<div id="sidebar-nav" class="sidebar">
+				<nav>
+					<ul class="nav" id="sidebar-nav-menu">
+						<li><a href="dashboard-admin.html"><i class="ti-dashboard"></i><span class="title">Dashboard</span></a></li>
+						<li class="panel">
+							<a href="#dashboards" data-toggle="collapse" data-parent="#sidebar-nav-menu" class="collapsed"><i class="ti-receipt"></i> <span class="title">Proses Surat</span> <i class="icon-submenu ti-angle-left"></i></a>
+							<div id="dashboards" class="collapse ">
+								<ul class="submenu">
+									<li><a href="suratKP.html" >Surat Permohonan KP</a></li>
+									<li><a href="suratAK.html" >SK Aktif Kuliah </a></li>
+									<li><a href="suratIP.html" >Surat Izin Penelitian</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="panel">
+							<a href="#layouts" data-toggle="collapse" data-parent="#sidebar-nav-menu" class="collapsed active"><i class="ti-layout-grid2"></i> <span clas="title">Arsip Surat</span> <i class="icon-submenu ti-angle-left"></i></a>
+							<div id="layouts" class="collapse ">
+								<ul class="submenu">
+									<li><a href="arsipKP.html" >Surat Permohonan KP</a></li>
+									<li><a href="arsipAK.html" class="active">SK Aktif Kuliah</a></li>
+									<li><a href="arsipIP.html" >Surat Izin Penelitian</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="panel">
+							<a href="#riwayat" data-toggle="collapse" data-parent="#sidebar-nav-menu" class="collapsed"><i class="fa fa-history"></i> <span clas="title">Riwayat Surat</span> <i class="icon-submenu ti-angle-left"></i></a>
+							<div id="riwayat" class="collapse ">
+								<ul class="submenu">
+									<li><a href="suratproses.html" >Surat Diproses</a></li>
+									<li><a href="suratselesai.html" >Surat Selesai</a></li>
+									<li><a href="suratbatal.html" >Surat Dibatalkan</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="panel">
+							<a href="#daftar" data-toggle="collapse" data-parent="#sidebar-nav-menu" class="collapsed"><i class="fa fa-list-ul"></i> <span clas="title">Daftar Surat</span> <i class="icon-submenu ti-angle-left"></i></a>
+							<div id="daftar" class="collapse ">
+								<ul class="submenu">
+									<li><a href="dftrsrt-selesai.html" >Daftar Surat Selesai</a></li>
+									<li><a href="dftrsrt-prmhnkeluar.html" >Daftar Nomor Surat Permohonan Keluar</a></li>
+									<li><a href="dftrsrt-keluar.html" >Daftar Nomor Surat Keluar</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="edit-template.html" ><i class="fa fa-pencil"></i> <span class="title">Edit Template Surat </span></a></li>
+						<li><a href="tambah-mahasiswa.html"><i class="fa fa-plus"></i> <span class="title">Tambah Mahasiswa</span></a></li>
+					</ul>
+				</nav>
+			</div>
+			<!-- END LEFT SIDEBAR -->
+			<!-- MAIN -->
+			<div class="main">
+				<!-- MAIN CONTENT -->
+				<div class="main-content">
+					<div class="content-heading clearfix">
+						<div class="heading-left">
+							<h1 class="page-title">Arsip Surat Keterangan Aktif Kuliah</h1>
+						</div>
+						<ul class="breadcrumb">
+							<li><a href="#"><i class="fa fa-home"></i>Home</a></li>
+							<li><a href="#">Arsip Surat</a></li>
+							<li class="active">SK Aktif Kuliah</li>
+						</ul>
+					</div>
+					<div class="container-fluid">
+							<div class="panel">
+							<div class="panel-heading">
+								<h3 class="panel-title">ARSIP SURAT KETERANGAN AKTIF KULIAH MAHASISWA</h3>
+							</div>
+							<div class="panel-body">
+								<table id="featured-datatable" class="table table-striped table-hover">
+									<thead>
+										<tr>
+											<th>Nomor</th>
+											<th>Nomor Surat</th>
+											<th>Nama Mahasiswa</th>
+											<th>Tanggal Pengajuan</th>
+											<th>Tanggal Surat Selesai</th>
+											<th>Keterangan</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1.</td>
+											<td>231</td>
+											<td>Billa</td>
+											<td>25 September 2018</td>
+											<td>30 Oktober 2018</td>
+											<td>-</td>
+										</tr>
+										<tr>
+											<td>2.</td>
+											<td>232</td>
+											<td>Nani</td>
+											<td>15 September 2018</td>
+											<td>20 September 2018</td>
+											<td>-</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="container-fluid">
+							<div class="panel">
+							<div class="panel-heading">
+								<h3 class="panel-title">ARSIP SURAT KETERANGAN AKTIF KULIAH ALUMNI</h3>
+							</div>
+							<div class="panel-body">
+								<table id="featured-datatable2" class="table table-striped table-hover">
+									<thead>
+										<tr>
+											<th>Nomor</th>
+											<th>Nomor Surat</th>
+											<th>Nama Mahasiswa</th>
+											<th>Tanggal Pengajuan</th>
+											<th>Tanggal Surat Selesai</th>
+											<th>Keterangan</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1.</td>
+											<td>231</td>
+											<td>Billa</td>
+											<td>25 September 2018</td>
+											<td>30 Oktober 2018</td>
+											<td>-</td>
+										</tr>
+										<tr>
+											<td>2.</td>
+											<td>232</td>
+											<td>Nani</td>
+											<td>15 September 2018</td>
+											<td>20 September 2018</td>
+											<td>-</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>	
+				</div>	
+			<div class="clearfix"></div>
+			<footer>
+				<div class="container-fluid">
+					<p class="copyright">&copy; 2018 <a href="https://www.themeineed.com" target="_blank">Theme I Need</a>. All Rights Reserved.</p>
+				</div>
+			</footer>
+		</div>
+		<!-- END WRAPPER -->
+		<!-- Javascript -->
+		<script src="assets/vendor/jquery/jquery.min.js"></script>
+		<script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+		<script src="assets/vendor/pace/pace.min.js"></script>
+		<script src="assets/vendor/jquery.maskedinput/jquery.maskedinput.min.js"></script>
+		<script src="assets/vendor/jquery-ui/jquery-ui.min.js"></script>
+		<script src="assets/vendor/pwstrength-bootstrap/pwstrength-bootstrap.min.js"></script>
+		<script src="assets/vendor/hideshowpassword/hideShowPassword.min.js"></script>
+		<script src="assets/vendor/switchery/switchery.min.js"></script>
+		<script src="assets/scripts/klorofilpro-common.js"></script>
+		<script src="assets/vendor/datatables/js-main/jquery.dataTables.min.js"></script>
+		<script src="assets/vendor/datatables/js-bootstrap/dataTables.bootstrap.min.js"></script>
+		<script src="assets/vendor/datatables-colreorder/dataTables.colReorder.js"></script>
+		<script src="assets/vendor/datatables-tabletools/js/dataTables.tableTools.js"></script>
+		<script src="assets/scripts/klorofilpro-common.js"></script>
+		<!-- DEMO PANEL -->
+		<!-- for demo purpose only, you should remove it on your project directory -->
+		<script type="text/javascript">
+		var toggleDemoPanel = function(e)
+		{
+			e.preventDefault();
+			var panel = document.getElementById('demo-panel');
+			if (panel.className) panel.className = '';
+			else panel.className = 'active';
+		}
+		// fix each iframe src when back button is clicked
+		$(function()
+		{
+			$('iframe').each(function()
+			{
+				this.src = this.src;
+			});
+		});
+		</script>
+		<script>
+		$(function()
+		{
+			// datatable column with reorder extension
+			$('#datatable-column-reorder').dataTable(
+			{
+				pagingType: "full_numbers",
+				sDom: "RC" +
+					"t" +
+					"<'row'<'col-sm-6'i><'col-sm-6'p>>",
+				colReorder: true,
+			});
+			// datatable with column filter enabled
+			var dtTable = $('#datatable-column-filter').DataTable(
+			{ // use DataTable, not dataTable
+				sDom: // redefine sDom without lengthChange and default search box
+					"t" +
+					"<'row'<'col-sm-6'i><'col-sm-6'p>>"
+			});
+			$('#datatable-column-filter thead .row-filter th').each(function()
+			{
+				$(this).html('<input type="text" class="form-control input-sm" placeholder="Search...">');
+			});
+			$('#datatable-column-filter .row-filter input').on('keyup change', function()
+			{
+				dtTable
+					.column($(this).parent().index() + ':visible')
+					.search(this.value)
+					.draw();
+			});
+			// datatable with paging options and live search
+			$('#featured-datatable').dataTable(
+			{
+				sDom: "<'row'<'col-sm-6'l><'col-sm-6'f>r>t<'row'<'col-sm-6'i><'col-sm-6'p>>",
+			});
+			// datatable with export feature
+			var exportTable = $('#datatable-data-export').DataTable(
+			{
+				sDom: "T<'clearfix'>" +
+					"<'row'<'col-sm-6'l><'col-sm-6'f>r>" +
+					"t" +
+					"<'row'<'col-sm-6'i><'col-sm-6'p>>",
+				"tableTools":
+				{
+					"sSwfPath": "assets/vendor/datatables-tabletools/swf/copy_csv_xls_pdf.swf"
+				}
+			});
+			// datatable with scrolling
+			$('#datatable-basic-scrolling').dataTable(
+			{
+				scrollY: "300px",
+				scrollCollapse: true,
+				paging: false
+			});
+		});
+		</script>
+	</body>
+</html>
