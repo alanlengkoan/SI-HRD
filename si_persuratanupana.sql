@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 4.6.6deb5
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Waktu pembuatan: 07 Jul 2019 pada 10.43
--- Versi server: 5.7.24
--- Versi PHP: 7.2.11
+-- Host: localhost:3306
+-- Generation Time: 28 Sep 2020 pada 09.31
+-- Versi Server: 10.1.44-MariaDB-0ubuntu0.18.04.1
+-- PHP Version: 7.2.24-0ubuntu0.18.04.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -19,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `dev_persuratan_upana`
+-- Database: `si_persuratanupana`
 --
 
 -- --------------------------------------------------------
@@ -340,7 +338,7 @@ INSERT INTO `template_surat_spk01` (`id_template_surat_izinpenelitian`, `id_data
 --
 
 --
--- Indeks untuk tabel `data_dosen`
+-- Indexes for table `data_dosen`
 --
 ALTER TABLE `data_dosen`
   ADD PRIMARY KEY (`id_data_dosen`),
@@ -349,164 +347,151 @@ ALTER TABLE `data_dosen`
   ADD KEY `id_master_jabatan_2` (`id_master_jabatan`);
 
 --
--- Indeks untuk tabel `data_mahasiswa`
+-- Indexes for table `data_mahasiswa`
 --
 ALTER TABLE `data_mahasiswa`
   ADD PRIMARY KEY (`id_data_mahasiswa`),
   ADD UNIQUE KEY `nim_mahasiswa` (`nim_mahasiswa`);
 
 --
--- Indeks untuk tabel `data_suratinvoice`
+-- Indexes for table `data_suratinvoice`
 --
 ALTER TABLE `data_suratinvoice`
   ADD PRIMARY KEY (`id_data_suratinvoice`);
 
 --
--- Indeks untuk tabel `data_suratspk01`
+-- Indexes for table `data_suratspk01`
 --
 ALTER TABLE `data_suratspk01`
   ADD PRIMARY KEY (`id_data_suratspk01`);
 
 --
--- Indeks untuk tabel `data_suratspk02`
+-- Indexes for table `data_suratspk02`
 --
 ALTER TABLE `data_suratspk02`
   ADD PRIMARY KEY (`id_data_suratspk02`);
 
 --
--- Indeks untuk tabel `data_user`
+-- Indexes for table `data_user`
 --
 ALTER TABLE `data_user`
   ADD PRIMARY KEY (`id_data_user`),
   ADD UNIQUE KEY `username` (`username`);
 
 --
--- Indeks untuk tabel `master_departemen`
+-- Indexes for table `master_departemen`
 --
 ALTER TABLE `master_departemen`
   ADD PRIMARY KEY (`id_master_departemen`);
 
 --
--- Indeks untuk tabel `master_jabatan`
+-- Indexes for table `master_jabatan`
 --
 ALTER TABLE `master_jabatan`
   ADD PRIMARY KEY (`id_master_jabatan`);
 
 --
--- Indeks untuk tabel `master_surat`
+-- Indexes for table `master_surat`
 --
 ALTER TABLE `master_surat`
   ADD PRIMARY KEY (`id_master_surat`);
 
 --
--- Indeks untuk tabel `template_header_surat`
+-- Indexes for table `template_header_surat`
 --
 ALTER TABLE `template_header_surat`
   ADD PRIMARY KEY (`id_template_header_surat`);
 
 --
--- Indeks untuk tabel `template_surat_aktifkuliah`
+-- Indexes for table `template_surat_aktifkuliah`
 --
 ALTER TABLE `template_surat_aktifkuliah`
   ADD PRIMARY KEY (`id_template_surat_aktifkuliah`),
   ADD KEY `id_data_dosen` (`id_data_dosen`);
 
 --
--- Indeks untuk tabel `template_surat_kerjapraktek`
+-- Indexes for table `template_surat_kerjapraktek`
 --
 ALTER TABLE `template_surat_kerjapraktek`
   ADD PRIMARY KEY (`id_template_surat_kerjapraktek`),
   ADD KEY `id_data_dosen` (`id_data_dosen`);
 
 --
--- Indeks untuk tabel `template_surat_spk01`
+-- Indexes for table `template_surat_spk01`
 --
 ALTER TABLE `template_surat_spk01`
   ADD PRIMARY KEY (`id_template_surat_izinpenelitian`),
   ADD KEY `id_data_dosen` (`id_data_dosen`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `data_dosen`
+-- AUTO_INCREMENT for table `data_dosen`
 --
 ALTER TABLE `data_dosen`
   MODIFY `id_data_dosen` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
 --
--- AUTO_INCREMENT untuk tabel `data_mahasiswa`
+-- AUTO_INCREMENT for table `data_mahasiswa`
 --
 ALTER TABLE `data_mahasiswa`
   MODIFY `id_data_mahasiswa` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
 --
--- AUTO_INCREMENT untuk tabel `data_suratinvoice`
+-- AUTO_INCREMENT for table `data_suratinvoice`
 --
 ALTER TABLE `data_suratinvoice`
   MODIFY `id_data_suratinvoice` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
 --
--- AUTO_INCREMENT untuk tabel `data_suratspk01`
+-- AUTO_INCREMENT for table `data_suratspk01`
 --
 ALTER TABLE `data_suratspk01`
   MODIFY `id_data_suratspk01` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
 --
--- AUTO_INCREMENT untuk tabel `data_suratspk02`
+-- AUTO_INCREMENT for table `data_suratspk02`
 --
 ALTER TABLE `data_suratspk02`
   MODIFY `id_data_suratspk02` int(16) NOT NULL AUTO_INCREMENT;
-
 --
--- AUTO_INCREMENT untuk tabel `data_user`
+-- AUTO_INCREMENT for table `data_user`
 --
 ALTER TABLE `data_user`
   MODIFY `id_data_user` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
 --
--- AUTO_INCREMENT untuk tabel `master_departemen`
+-- AUTO_INCREMENT for table `master_departemen`
 --
 ALTER TABLE `master_departemen`
   MODIFY `id_master_departemen` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
 --
--- AUTO_INCREMENT untuk tabel `master_jabatan`
+-- AUTO_INCREMENT for table `master_jabatan`
 --
 ALTER TABLE `master_jabatan`
   MODIFY `id_master_jabatan` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
 --
--- AUTO_INCREMENT untuk tabel `master_surat`
+-- AUTO_INCREMENT for table `master_surat`
 --
 ALTER TABLE `master_surat`
   MODIFY `id_master_surat` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
 --
--- AUTO_INCREMENT untuk tabel `template_header_surat`
+-- AUTO_INCREMENT for table `template_header_surat`
 --
 ALTER TABLE `template_header_surat`
   MODIFY `id_template_header_surat` int(16) NOT NULL AUTO_INCREMENT;
-
 --
--- AUTO_INCREMENT untuk tabel `template_surat_aktifkuliah`
+-- AUTO_INCREMENT for table `template_surat_aktifkuliah`
 --
 ALTER TABLE `template_surat_aktifkuliah`
   MODIFY `id_template_surat_aktifkuliah` int(16) NOT NULL AUTO_INCREMENT;
-
 --
--- AUTO_INCREMENT untuk tabel `template_surat_kerjapraktek`
+-- AUTO_INCREMENT for table `template_surat_kerjapraktek`
 --
 ALTER TABLE `template_surat_kerjapraktek`
   MODIFY `id_template_surat_kerjapraktek` int(16) NOT NULL AUTO_INCREMENT;
-
 --
--- AUTO_INCREMENT untuk tabel `template_surat_spk01`
+-- AUTO_INCREMENT for table `template_surat_spk01`
 --
 ALTER TABLE `template_surat_spk01`
   MODIFY `id_template_surat_izinpenelitian` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
@@ -541,7 +526,6 @@ ALTER TABLE `template_surat_kerjapraktek`
 --
 ALTER TABLE `template_surat_spk01`
   ADD CONSTRAINT `template_surat_spk01_ibfk_1` FOREIGN KEY (`id_data_dosen`) REFERENCES `data_dosen` (`id_data_dosen`);
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
