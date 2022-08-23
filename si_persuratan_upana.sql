@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.6deb5
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: 28 Sep 2020 pada 09.31
--- Versi Server: 10.1.44-MariaDB-0ubuntu0.18.04.1
--- PHP Version: 7.2.24-0ubuntu0.18.04.6
+-- Host: localhost
+-- Generation Time: Aug 23, 2022 at 01:05 PM
+-- Server version: 5.7.24
+-- PHP Version: 7.4.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -17,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `si_persuratanupana`
+-- Database: `si_persuratan_upana`
 --
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `data_dosen`
+-- Table structure for table `data_dosen`
 --
 
 CREATE TABLE `data_dosen` (
@@ -41,20 +42,12 @@ CREATE TABLE `data_dosen` (
   `agama` varchar(64) NOT NULL,
   `Iat` datetime NOT NULL,
   `Uat` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data untuk tabel `data_dosen`
---
-
-INSERT INTO `data_dosen` (`id_data_dosen`, `id_master_jabatan`, `id_master_departemen`, `nip_dosen`, `nama_dosen`, `tempat_lahir`, `tanggal_lahir`, `alamat_dosen`, `telepon_dosen`, `email_dosen`, `jenis_kelamin`, `agama`, `Iat`, `Uat`) VALUES
-(1, 1, 1, '10001111222', 'Billy Ukim, S.T', 'Indonesia', '1977-10-28', 'Jl. Kariango', '0800112233', 'billy.billy@gmail.com', 'L', 'Islam', '0000-00-00 00:00:00', '2018-10-29 14:10:10'),
-(2, 2, 1, '0011001223', 'Pujo Satrianto', 'Tenggarong', '1988-10-01', 'Dekat lapangan pemuda', '09991112222', 'pujojo@gmail.com', 'L', 'Islam', '0000-00-00 00:00:00', '2018-10-29 14:10:10');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `data_mahasiswa`
+-- Table structure for table `data_mahasiswa`
 --
 
 CREATE TABLE `data_mahasiswa` (
@@ -69,23 +62,23 @@ CREATE TABLE `data_mahasiswa` (
   `agama` varchar(64) NOT NULL,
   `telepon_mahasiswa` varchar(16) NOT NULL,
   `status_mahasiswa` varchar(64) NOT NULL,
-  `Iat` datetime NOT NULL,
+  `Iat` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `Uat` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 --
--- Dumping data untuk tabel `data_mahasiswa`
+-- Dumping data for table `data_mahasiswa`
 --
 
 INSERT INTO `data_mahasiswa` (`id_data_mahasiswa`, `nim_mahasiswa`, `nama_mahasiswa`, `alamat_mahasiswa`, `tempat_lahir`, `tanggal_lahir`, `email_mahasiswa`, `jenis_kelamin`, `agama`, `telepon_mahasiswa`, `status_mahasiswa`, `Iat`, `Uat`) VALUES
-(1, 'D42115320', 'Fadel Rezky Ramadhan', 'Jl. BTN Griya Maros Indah', 'Makassar', '1997-02-01', 'fadelr35@gmail.com', 'L', 'Islam', '089631837157', 'Aktif', '0000-00-00 00:00:00', '2018-11-06 06:15:17'),
-(3, 'D42115010', 'Ramadhan', 'disini', '', '0000-00-00', 'ramadhan@gmail.com', 'L', '', '08123456789', '', '0000-00-00 00:00:00', '2018-11-21 04:03:47'),
-(4, 'D42115321', 'Fadel Rezky', 'disini', '', '0000-00-00', 'aiji@gmail.com', 'P', '', '08123456789', '', '0000-00-00 00:00:00', '2018-11-21 05:25:47');
+(1, 'D42115320', 'Fadel Rezky Ramadhan', 'Jl. BTN Griya Maros Indah', 'Makassar', '1997-02-01', 'fadelr35@gmail.com', 'L', 'Islam', '089631837157', 'Aktif', '2022-08-23 21:01:41', '2022-08-23 13:01:41'),
+(3, 'D42115010', 'Ramadhan', 'disini', '', '1997-02-01', 'ramadhan@gmail.com', 'L', '', '08123456789', '', '2022-08-23 21:01:41', '2022-08-23 13:01:41'),
+(4, 'D42115321', 'Fadel Rezky', 'disini', '', '1997-02-01', 'aiji@gmail.com', 'P', '', '08123456789', '', '2022-08-23 21:01:41', '2022-08-23 13:01:41');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `data_suratinvoice`
+-- Table structure for table `data_suratinvoice`
 --
 
 CREATE TABLE `data_suratinvoice` (
@@ -99,21 +92,12 @@ CREATE TABLE `data_suratinvoice` (
   `status` varchar(64) NOT NULL,
   `iat` datetime NOT NULL,
   `uat` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data untuk tabel `data_suratinvoice`
---
-
-INSERT INTO `data_suratinvoice` (`id_data_suratinvoice`, `nomor_surat`, `pengirim`, `projek`, `tanggal_selesai`, `deskripsi`, `harga`, `status`, `iat`, `uat`) VALUES
-(1, '0001/INV/USI/XII/2018', '', '', '0000-00-00', '', '0', 'SELESAI', '0000-00-00 00:00:00', '2018-12-13 09:12:25'),
-(2, '0002/INV/USI/XII/2018', '', '', '0000-00-00', '', '0', '', '0000-00-00 00:00:00', '2018-12-19 04:57:17'),
-(3, '0001/INV/USI/VI/2019', 'tes', 'tes', '2222-02-22', 'tes', 'tes', '', '0000-00-00 00:00:00', '2019-06-24 08:40:34');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `data_suratspk01`
+-- Table structure for table `data_suratspk01`
 --
 
 CREATE TABLE `data_suratspk01` (
@@ -133,20 +117,12 @@ CREATE TABLE `data_suratspk01` (
   `status` varchar(32) NOT NULL,
   `iat` datetime NOT NULL,
   `uat` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data untuk tabel `data_suratspk01`
---
-
-INSERT INTO `data_suratspk01` (`id_data_suratspk01`, `pemohon`, `nomor_surat`, `perusahaan`, `jabatan_pemohon`, `alamat`, `pesanan`, `waktu_kerja`, `harga`, `terbilang`, `bank`, `no_rekening`, `pemilik_rekening`, `status`, `iat`, `uat`) VALUES
-(1, 'Billa Armani Abdullah', '0001/SPK-01/USI/XII/2018', 'PT. Billa Tiba Masanya', 'Pemimpin Redaksi PT. Billa Tiba Masanya', 'Jl. Dirgantara, Kec. Pallanga, Kab. Gowa', 'Sistem Informasi Pegawai PT. Billa Tiba Masanya', '120 Hari Kerja', '10000000', 'seratus lima puluh ribu', 'Bank Sendiri', '1221110021', 'Saya Sendiri', '', '0000-00-00 00:00:00', '2019-07-05 11:26:59'),
-(2, 'Fadel Rezky', '0002/SPK01/USI/XII/2018', 'PT. Dimanapun Berada', 'Anggota', 'disini', 'Game Harvest Moon', '120 hari', '100000', 'seratus lima puluh ribu', 'btpn', '11121222222112', 'saya', '', '0000-00-00 00:00:00', '2019-07-05 11:27:11');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `data_suratspk02`
+-- Table structure for table `data_suratspk02`
 --
 
 CREATE TABLE `data_suratspk02` (
@@ -165,12 +141,12 @@ CREATE TABLE `data_suratspk02` (
   `waktu_kerja` varchar(64) NOT NULL,
   `tanggal_selesai` date NOT NULL,
   `harga` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `data_user`
+-- Table structure for table `data_user`
 --
 
 CREATE TABLE `data_user` (
@@ -184,21 +160,21 @@ CREATE TABLE `data_user` (
   `email_admin` varchar(64) NOT NULL,
   `telepon_admin` varchar(16) NOT NULL,
   `alamat_admin` text NOT NULL,
-  `Iat` datetime NOT NULL,
+  `Iat` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `Uat` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 --
--- Dumping data untuk tabel `data_user`
+-- Dumping data for table `data_user`
 --
 
 INSERT INTO `data_user` (`id_data_user`, `username`, `nama`, `password_admin`, `level_akses`, `remember_me`, `session_id`, `email_admin`, `telepon_admin`, `alamat_admin`, `Iat`, `Uat`) VALUES
-(1, 'D42115320', 'Fadel Rezky Ramadhan', '202cb962ac59075b964b07152d234b70', 'mahasiswa', 0, '7d023nm57vn8r41u5borr0gqmk7i50hl', 'fadelr35@gmail.com', '089631837157', 'Jl. BTN Griya Maros Indah', '0000-00-00 00:00:00', '2019-07-07 07:26:30');
+(1, 'D42115320', 'Alan Lengkoan', '202cb962ac59075b964b07152d234b70', 'mahasiswa', 0, 'qlsf5q8o0qets3govgj8jmkgfek7gse4', 'fadelr35@gmail.com', '089631837157', 'Jl. BTN Griya Maros Indah', '2022-08-23 21:01:45', '2022-08-23 13:05:32');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `master_departemen`
+-- Table structure for table `master_departemen`
 --
 
 CREATE TABLE `master_departemen` (
@@ -207,20 +183,12 @@ CREATE TABLE `master_departemen` (
   `jurusan` varchar(64) NOT NULL,
   `iat` datetime NOT NULL,
   `uat` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data untuk tabel `master_departemen`
---
-
-INSERT INTO `master_departemen` (`id_master_departemen`, `nama_departemen`, `jurusan`, `iat`, `uat`) VALUES
-(1, 'Teknik Informatika', 'Teknik Elektro', '0000-00-00 00:00:00', '2018-10-28 17:41:11'),
-(2, 'Teknik Elektro', 'Teknik Elektro', '0000-00-00 00:00:00', '2018-10-28 17:41:11');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `master_jabatan`
+-- Table structure for table `master_jabatan`
 --
 
 CREATE TABLE `master_jabatan` (
@@ -228,20 +196,12 @@ CREATE TABLE `master_jabatan` (
   `nama_jabatan` varchar(64) NOT NULL,
   `iat` datetime NOT NULL,
   `uat` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data untuk tabel `master_jabatan`
---
-
-INSERT INTO `master_jabatan` (`id_master_jabatan`, `nama_jabatan`, `iat`, `uat`) VALUES
-(1, 'Ketua Program Studi Teknik Informatika', '0000-00-00 00:00:00', '2018-10-28 17:42:19'),
-(2, 'Sekretaris Mahasiswa Teknik Informatika', '0000-00-00 00:00:00', '2018-10-28 17:42:19');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `master_surat`
+-- Table structure for table `master_surat`
 --
 
 CREATE TABLE `master_surat` (
@@ -250,21 +210,12 @@ CREATE TABLE `master_surat` (
   `kode` varchar(16) NOT NULL,
   `iat` datetime NOT NULL,
   `uat` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data untuk tabel `master_surat`
---
-
-INSERT INTO `master_surat` (`id_master_surat`, `jenis`, `kode`, `iat`, `uat`) VALUES
-(1, 'Surat Invoice', 'INV', '0000-00-00 00:00:00', '2018-12-19 04:36:21'),
-(2, 'Surat SPK 01', 'SPK01', '0000-00-00 00:00:00', '2018-12-20 07:04:41'),
-(3, 'Surat SPK 02', 'SPK02', '0000-00-00 00:00:00', '2018-12-20 07:04:49');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `template_header_surat`
+-- Table structure for table `template_header_surat`
 --
 
 CREATE TABLE `template_header_surat` (
@@ -275,12 +226,12 @@ CREATE TABLE `template_header_surat` (
   `header_surat3` text NOT NULL,
   `iat` datetime NOT NULL,
   `uat` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `template_surat_aktifkuliah`
+-- Table structure for table `template_surat_aktifkuliah`
 --
 
 CREATE TABLE `template_surat_aktifkuliah` (
@@ -291,12 +242,12 @@ CREATE TABLE `template_surat_aktifkuliah` (
   `isi_ketiga` text NOT NULL,
   `iat` datetime NOT NULL,
   `uat` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `template_surat_kerjapraktek`
+-- Table structure for table `template_surat_kerjapraktek`
 --
 
 CREATE TABLE `template_surat_kerjapraktek` (
@@ -307,12 +258,12 @@ CREATE TABLE `template_surat_kerjapraktek` (
   `isi_ketiga` text NOT NULL,
   `iat` datetime NOT NULL,
   `uat` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `template_surat_spk01`
+-- Table structure for table `template_surat_spk01`
 --
 
 CREATE TABLE `template_surat_spk01` (
@@ -324,14 +275,7 @@ CREATE TABLE `template_surat_spk01` (
   `isi_keempat` text NOT NULL,
   `iat` datetime NOT NULL,
   `uat` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data untuk tabel `template_surat_spk01`
---
-
-INSERT INTO `template_surat_spk01` (`id_template_surat_izinpenelitian`, `id_data_dosen`, `isi_pertama`, `isi_kedua`, `isi_ketiga`, `isi_keempat`, `iat`, `uat`) VALUES
-(1, 2, 'Dalam pelaksanaan kerjasama tersebut, <span class=\"c1\">PARA PIHAK</span> sepakat bahwa seluruh informasi baik mengenai hasil-hasil yang dicapai maupun segala sesuatu yang atau dipertukarkan oleh <span class=\"c1\">PARA PIHAK</span> baik pada saat sebelum, selama maupun sesudah proses pelaksanaan kerjasama ini, wajib diperlakukan sebagai rahasia selama 2 (dua) tahun terhitung sejak tanggal berakhirnya Perjanjian Kerjasama ini karena sebab apapun, kecuali ditentukan lain secara tertulis oleh pihak yang memberi informasi.', '<ol class=\"c6 lst-kix_list_7-8 start\" start=\"1\">\n    <li class=\"c12 c14\">\n        <span class=\"c4\">Keadaan memaksa adalah keadaan atau kejadian di luar kekuasaan</span> <span class=\"c7 c1\">PIHAK PERTAMA</span><span class=\"c4\">&nbsp;dan </span><span class=\"c7 c1\">PIHAK KEDUA</span> <span class=\"c4\">&nbsp;yang mengakibatkan terhentinya atau tertundanya pelaksanaan perjanjian, yaitu bencana alam (banjir, gempa bumi, angin, topan, petir) serta huru-hara, kebakaran dan hal-hal lain di luar kekuasaan kedua belah pihak yang oleh pejabat berwenang dinyatakan sebagai keadaan memaksa.</span>\n    </li>\n    <li class=\"c12 c14\">\n        <span class=\"c1 c7\">PIHAK PERTAMA</span><span class=\"c4\">&nbsp;dapat meminta pertimbangan dari </span><span class=\"c7 c1\">PIHAK KEDUA</span><span class=\"c4\">&nbsp;secara tertulis selambat-lambatnya dalam waktu 2 (satu) hari sejak terjadinya keadaan memaksa dan dilampirkan bukti-bukti yang sah untuk menyelesaikan pekerjaan akibat keadaan memaksa berdasarkan penyelidikan yang seksama.</span>\n    </li>\n</ol>', 'Hal-hal lain yang ada hubungannya dengan perjanjian ini dan belum cukup diatur dalam pasal-pasal dari surat perjanjian ini akan ditentukan lebih lanjut oleh kedua belah pihak secara musyawarah dan mufakat dan dituangkan dalam Surat Perjanjian Tambahan/Addendum dan merupakan bagian yang tidak terpisahkan dari perjanjian ini.', '<ol class=\"c6 lst-kix_list_5-8 start\" start=\"1\">\n    <li class=\"c12 c49 c14\">\n        <span class=\"c4\">Surat Perjanjian ini dinyatakan sah dan mengikat kedua belah pihak dan mulai berlaku setelah ditandatangani oleh kedua belah pihak.</span>\n    </li>\n    <li class=\"c42 c49 c14\">\n        <span class=\"c4\">Surat Perjanjian ini dibuat 2 (dua) rangkap masing-masing bermaterai cukup dan mempunyai kekuatan hukum yang sama.</span>\n    </li>\n</ol>', '2019-07-18 00:00:00', '2019-07-07 10:04:54');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 --
 -- Indexes for dumped tables
@@ -341,87 +285,87 @@ INSERT INTO `template_surat_spk01` (`id_template_surat_izinpenelitian`, `id_data
 -- Indexes for table `data_dosen`
 --
 ALTER TABLE `data_dosen`
-  ADD PRIMARY KEY (`id_data_dosen`),
-  ADD KEY `id_master_jabatan` (`id_master_jabatan`,`id_master_departemen`),
-  ADD KEY `id_master_departemen` (`id_master_departemen`),
-  ADD KEY `id_master_jabatan_2` (`id_master_jabatan`);
+  ADD PRIMARY KEY (`id_data_dosen`) USING BTREE,
+  ADD KEY `id_master_jabatan` (`id_master_jabatan`,`id_master_departemen`) USING BTREE,
+  ADD KEY `id_master_departemen` (`id_master_departemen`) USING BTREE,
+  ADD KEY `id_master_jabatan_2` (`id_master_jabatan`) USING BTREE;
 
 --
 -- Indexes for table `data_mahasiswa`
 --
 ALTER TABLE `data_mahasiswa`
-  ADD PRIMARY KEY (`id_data_mahasiswa`),
-  ADD UNIQUE KEY `nim_mahasiswa` (`nim_mahasiswa`);
+  ADD PRIMARY KEY (`id_data_mahasiswa`) USING BTREE,
+  ADD UNIQUE KEY `nim_mahasiswa` (`nim_mahasiswa`) USING BTREE;
 
 --
 -- Indexes for table `data_suratinvoice`
 --
 ALTER TABLE `data_suratinvoice`
-  ADD PRIMARY KEY (`id_data_suratinvoice`);
+  ADD PRIMARY KEY (`id_data_suratinvoice`) USING BTREE;
 
 --
 -- Indexes for table `data_suratspk01`
 --
 ALTER TABLE `data_suratspk01`
-  ADD PRIMARY KEY (`id_data_suratspk01`);
+  ADD PRIMARY KEY (`id_data_suratspk01`) USING BTREE;
 
 --
 -- Indexes for table `data_suratspk02`
 --
 ALTER TABLE `data_suratspk02`
-  ADD PRIMARY KEY (`id_data_suratspk02`);
+  ADD PRIMARY KEY (`id_data_suratspk02`) USING BTREE;
 
 --
 -- Indexes for table `data_user`
 --
 ALTER TABLE `data_user`
-  ADD PRIMARY KEY (`id_data_user`),
-  ADD UNIQUE KEY `username` (`username`);
+  ADD PRIMARY KEY (`id_data_user`) USING BTREE,
+  ADD UNIQUE KEY `username` (`username`) USING BTREE;
 
 --
 -- Indexes for table `master_departemen`
 --
 ALTER TABLE `master_departemen`
-  ADD PRIMARY KEY (`id_master_departemen`);
+  ADD PRIMARY KEY (`id_master_departemen`) USING BTREE;
 
 --
 -- Indexes for table `master_jabatan`
 --
 ALTER TABLE `master_jabatan`
-  ADD PRIMARY KEY (`id_master_jabatan`);
+  ADD PRIMARY KEY (`id_master_jabatan`) USING BTREE;
 
 --
 -- Indexes for table `master_surat`
 --
 ALTER TABLE `master_surat`
-  ADD PRIMARY KEY (`id_master_surat`);
+  ADD PRIMARY KEY (`id_master_surat`) USING BTREE;
 
 --
 -- Indexes for table `template_header_surat`
 --
 ALTER TABLE `template_header_surat`
-  ADD PRIMARY KEY (`id_template_header_surat`);
+  ADD PRIMARY KEY (`id_template_header_surat`) USING BTREE;
 
 --
 -- Indexes for table `template_surat_aktifkuliah`
 --
 ALTER TABLE `template_surat_aktifkuliah`
-  ADD PRIMARY KEY (`id_template_surat_aktifkuliah`),
-  ADD KEY `id_data_dosen` (`id_data_dosen`);
+  ADD PRIMARY KEY (`id_template_surat_aktifkuliah`) USING BTREE,
+  ADD KEY `id_data_dosen` (`id_data_dosen`) USING BTREE;
 
 --
 -- Indexes for table `template_surat_kerjapraktek`
 --
 ALTER TABLE `template_surat_kerjapraktek`
-  ADD PRIMARY KEY (`id_template_surat_kerjapraktek`),
-  ADD KEY `id_data_dosen` (`id_data_dosen`);
+  ADD PRIMARY KEY (`id_template_surat_kerjapraktek`) USING BTREE,
+  ADD KEY `id_data_dosen` (`id_data_dosen`) USING BTREE;
 
 --
 -- Indexes for table `template_surat_spk01`
 --
 ALTER TABLE `template_surat_spk01`
-  ADD PRIMARY KEY (`id_template_surat_izinpenelitian`),
-  ADD KEY `id_data_dosen` (`id_data_dosen`);
+  ADD PRIMARY KEY (`id_template_surat_izinpenelitian`) USING BTREE,
+  ADD KEY `id_data_dosen` (`id_data_dosen`) USING BTREE;
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -431,101 +375,115 @@ ALTER TABLE `template_surat_spk01`
 -- AUTO_INCREMENT for table `data_dosen`
 --
 ALTER TABLE `data_dosen`
-  MODIFY `id_data_dosen` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_data_dosen` int(16) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `data_mahasiswa`
 --
 ALTER TABLE `data_mahasiswa`
   MODIFY `id_data_mahasiswa` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
 --
 -- AUTO_INCREMENT for table `data_suratinvoice`
 --
 ALTER TABLE `data_suratinvoice`
-  MODIFY `id_data_suratinvoice` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_data_suratinvoice` int(16) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `data_suratspk01`
 --
 ALTER TABLE `data_suratspk01`
-  MODIFY `id_data_suratspk01` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_data_suratspk01` int(16) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `data_suratspk02`
 --
 ALTER TABLE `data_suratspk02`
   MODIFY `id_data_suratspk02` int(16) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `data_user`
 --
 ALTER TABLE `data_user`
   MODIFY `id_data_user` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT for table `master_departemen`
 --
 ALTER TABLE `master_departemen`
-  MODIFY `id_master_departemen` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_master_departemen` int(16) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `master_jabatan`
 --
 ALTER TABLE `master_jabatan`
-  MODIFY `id_master_jabatan` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_master_jabatan` int(16) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `master_surat`
 --
 ALTER TABLE `master_surat`
-  MODIFY `id_master_surat` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_master_surat` int(16) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `template_header_surat`
 --
 ALTER TABLE `template_header_surat`
   MODIFY `id_template_header_surat` int(16) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `template_surat_aktifkuliah`
 --
 ALTER TABLE `template_surat_aktifkuliah`
   MODIFY `id_template_surat_aktifkuliah` int(16) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `template_surat_kerjapraktek`
 --
 ALTER TABLE `template_surat_kerjapraktek`
   MODIFY `id_template_surat_kerjapraktek` int(16) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `template_surat_spk01`
 --
 ALTER TABLE `template_surat_spk01`
-  MODIFY `id_template_surat_izinpenelitian` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_template_surat_izinpenelitian` int(16) NOT NULL AUTO_INCREMENT;
+
 --
--- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
+-- Constraints for dumped tables
 --
 
 --
--- Ketidakleluasaan untuk tabel `data_dosen`
+-- Constraints for table `data_dosen`
 --
 ALTER TABLE `data_dosen`
   ADD CONSTRAINT `data_dosen_ibfk_1` FOREIGN KEY (`id_master_jabatan`) REFERENCES `master_jabatan` (`id_master_jabatan`),
   ADD CONSTRAINT `data_dosen_ibfk_2` FOREIGN KEY (`id_master_departemen`) REFERENCES `master_departemen` (`id_master_departemen`);
 
 --
--- Ketidakleluasaan untuk tabel `data_user`
+-- Constraints for table `data_user`
 --
 ALTER TABLE `data_user`
   ADD CONSTRAINT `data_user_ibfk_1` FOREIGN KEY (`username`) REFERENCES `data_mahasiswa` (`nim_mahasiswa`);
 
 --
--- Ketidakleluasaan untuk tabel `template_surat_aktifkuliah`
+-- Constraints for table `template_surat_aktifkuliah`
 --
 ALTER TABLE `template_surat_aktifkuliah`
   ADD CONSTRAINT `template_surat_aktifkuliah_ibfk_1` FOREIGN KEY (`id_data_dosen`) REFERENCES `data_dosen` (`id_data_dosen`);
 
 --
--- Ketidakleluasaan untuk tabel `template_surat_kerjapraktek`
+-- Constraints for table `template_surat_kerjapraktek`
 --
 ALTER TABLE `template_surat_kerjapraktek`
   ADD CONSTRAINT `template_surat_kerjapraktek_ibfk_1` FOREIGN KEY (`id_data_dosen`) REFERENCES `data_dosen` (`id_data_dosen`);
 
 --
--- Ketidakleluasaan untuk tabel `template_surat_spk01`
+-- Constraints for table `template_surat_spk01`
 --
 ALTER TABLE `template_surat_spk01`
   ADD CONSTRAINT `template_surat_spk01_ibfk_1` FOREIGN KEY (`id_data_dosen`) REFERENCES `data_dosen` (`id_data_dosen`);
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
